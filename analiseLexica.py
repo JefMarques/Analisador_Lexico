@@ -1,8 +1,9 @@
 import re
 entrada = input("Digite um Lexema: ")
 lexema = entrada.replace(" ","")
-print(lexema)
+print("Antes do Regex:",lexema)
 lexema = re.sub(r'#.*','',lexema)
+print("Depois do Regex:",lexema)
 
 
 lista = []
