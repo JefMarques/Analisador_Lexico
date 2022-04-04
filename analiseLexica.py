@@ -1,6 +1,8 @@
+import re
 entrada = input("Digite um Lexema: ")
 lexema = entrada.replace(" ","")
 print(lexema)
+lexema = re.sub(r'#.*','',lexema)
 
 
 lista = []
