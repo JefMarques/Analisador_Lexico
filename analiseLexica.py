@@ -19,7 +19,7 @@ for i in range(len(lexema)):
         #dale = sorted(tabelaDeSimbolo)
         indexTabela = tabelaDeSimbolo.index(lexema[i])
 
-        print('<id',indexTabela,'> ', end='')
+        print('<id',indexTabela+1,'> ', end='')
         
 
     elif lexema[i].isdigit():
@@ -35,8 +35,8 @@ for i in range(len(lexema)):
     
 
 print("")
-ct = 0 
+ct = 0
 tab = sorted(set(tabelaLetra))
 for v in (tab):
-    ct =ct + 1
+    ct+=1    
     print(ct, v)
