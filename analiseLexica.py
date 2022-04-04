@@ -11,7 +11,7 @@ tabelaLetra = []
 for i in range(len(lexema)):
     
     if lexema[i].isalpha():
-        
+        tabelaLetra.append(lexema[i])
         if lexema[i] in tabelaDeSimbolo:
             del tabelaDeSimbolo[-1]
 
@@ -32,10 +32,11 @@ for i in range(len(lexema)):
     else:
         print('<error> ', end='')
 
-    tabelaLetra.append(tabelaDeSimbolo)
+    
 
 print("")
 ct = 0 
-for v in (tabelaDeSimbolo):
+tab = sorted(set(tabelaLetra))
+for v in (tab):
     ct =ct + 1
     print(ct, v)
