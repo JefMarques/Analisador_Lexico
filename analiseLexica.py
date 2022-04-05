@@ -6,7 +6,6 @@ lexema = re.sub(r'#.*','',lexema)
 print("Depois do Regex:",lexema)
 
 
-lista = []
 tabelaDeSimbolo = []
 tabelaLetra = []
 
@@ -19,14 +18,12 @@ for i in range(len(lexema)):
             del tabelaDeSimbolo[-1]
 
         tabelaDeSimbolo.append(lexema[i])
-        #dale = sorted(tabelaDeSimbolo)
         indexTabela = tabelaDeSimbolo.index(lexema[i])
 
         print('<id',indexTabela+1,'> ', end='')
         
-
+        
     elif lexema[i].isdigit():
-        lista.append(lexema[i])
         print('<digito', lexema[i]+'> ', end='')
     
     elif lexema[i] in ['=', '+', '*']:
